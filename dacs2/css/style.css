@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #222121;
+    color: white;
+}
+/* css của phần header */
+
+  
+#top .container .dropdown{
+    color: black;
+}
+#top .container .nav-link{
+    color: white;
+}
+#top .container .nav-link:hover{
+    background-color: black;
+}
+#top .container .dropdown-item:hover,
+#top .container .dropdown-item.active {
+    background: black;
+}
+#top .dropdown-menu{
+    background-color: #191A1D;
+    
+}
+
+.modal-content{
+    width: 550px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgba(255 ,255 ,255 ,.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+    font-size: 1.2rem;
+}
+.modal .modal-dialog .modal-content .modal-title{
+    font-size: 2rem;
+}
+
+
+.modal .modal-dialog .modal-content .modal-body{
+    margin-top: -5%;
+}
+.modal .modal-dialog .modal-content .modal-footer{
+    margin-top: -5%;
+}
+.modal .modal-dialog .modal-content .modal-body .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.modal .modal-dialog .modal-content .modal-body .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    /* border: 2px solid rgba(255, 255, 255, .2); */
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+.modal .modal-dialog .modal-content .modal-body .input-box  input::placeholder{
+    color: #b3b2b2;
+}
+.modal .modal-dialog .modal-content .modal-body .input-box  i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.modal-content {
+    border: none;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    border: none;
+}
+
+/* css của phần banner */
+:root{
+    --primary: #ff3700;
+}
+#banner{
+    position: relative;
+    width:100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('../img/the_little_mermaid_wallpaper.jpg') no-repeat;
+    background-size:cover ;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+#banner::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content{
+    position: relative;
+    max-width: 550px;
+    display: none;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.content.active{
+    display: block;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.movie-title{
+    max-width: 250px;
+}
+#banner .content h4{
+    color: rgb(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 30px;
+}
+#banner .content h4 span{
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+#banner .content h4 span:first-child{
+    padding-left: 0;
+}
+#banner .content h4 span:last-child{
+    border-right: none;
+}
+#banner .content h4 span i{
+    background: var(--primary);
+    color: white;
+    padding: 0 8px;
+    display: inline-block;
+    border-radius: 2px;
+}
+#banner .content p{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: rgb(228, 225, 225);
+    margin: 10px 0 20px;
+}
+#banner .content .button{
+    position: relative;
+}
+#banner .content .button a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: var(--primary);
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#banner .content .button a:nth-child(2){
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(255, 255, 255, 0.2);
+}
+#banner .content .button a:hover:nth-child(2){
+    background: var(--primary)
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    cursor: pointer;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    cursor: pointer;
+  }
+
+/* css phần history_movie */
+#history_movie{
+    margin-top: 3%;
+    margin-left: 4%;
+}
+.history_movie .heading{
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.history_movie .left-text {
+    text-align: left;
+  }
+  
+  .history_movie  .right-button {
+    text-align: right;
+    margin-right: 10%;
+  }
+.history_movie .movie-slider{
+    margin-top: 2%;
+    width: 90%;
+    margin-left: 0;
+}
+
+.history_movie .movie-slider .box{
+    width: 13rem;
+    margin-left: -3%;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.history_movie .movie-slider .box:hover .image{
+    transform: scale(1.1);
+    filter: blur(2px); 
+}
+
+.history_movie .movie-slider .box .image img{
+    width: 13rem;
+    height: 18rem;
+}
+.history_movie .movie-slider .box .image img:hover{
+    border: .1rem solid #333333;
+}
+.history_movie .movie-slider .box .play-icon {
+    position: absolute;
+    font-size: 4em;
+    top: 40%;
+    left: 30%;
+    transform: translate(-10%, -10%);
+    display: none;
+}
+
+.history_movie .movie-slider .box:hover .play-icon {
+    display: block;
+}
+
+.history_movie .movie-slider .box  h3{
+    margin-top: 7%;
+    margin-bottom: 10%;
+    font-size: 1.3rem;
+    color: #ffffff;
+    width: 15rem;
+    height: 30px;
+}
+.history_movie .movie-slider .box  h4{
+    font-size: 1rem;
+    color: rgb(172, 171, 171);
+    margin-top: 1%;
+}
+.history_movie .movie-slider .swiper-button-next , .history_movie .movie-slider .swiper-button-prev{
+    color: white;
+}
+.history_movie .movie-slider .box span{
+    color: #c1c1c1;
+}
+
+
+
+/* css phần series movie */
+#series_movie{
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.series_movie .heading{
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.series_movie .movie-slider{
+    margin-top: 2%;
+    width: 90%;
+    margin-left: 0;
+}
+
+.series_movie .movie-slider .box{
+    width: 13rem;
+    margin-left: -3%;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.series_movie .movie-slider .box:hover .image{
+    transform: scale(1.1);
+    filter: blur(2px); 
+}
+
+.series_movie .movie-slider .box .image img{
+    width: 13rem;
+    height: 18rem;
+}
+.series_movie .movie-slider .box .image img:hover{
+    border: .1rem solid #333333;
+}
+.series_movie .movie-slider .box .play-icon {
+    position: absolute;
+    font-size: 4em;
+    top: 40%;
+    left: 30%;
+    transform: translate(-10%, -10%);
+    display: none;
+}
+
+.series_movie .movie-slider .box:hover .play-icon {
+    display: block;
+}
+
+.series_movie .movie-slider .box  h3{
+    margin-top: 7%;
+    margin-bottom: 10%;
+    font-size: 1.3rem;
+    color: #ffffff;
+    width: 15rem;
+    height: 30px;
+}
+
+.series_movie .movie-slider .swiper-button-next , .series_movie .movie-slider .swiper-button-prev{
+    color: white;
+}
+.series_movie .movie-slider .box span{
+    color: #c1c1c1;
+}
+
+/* css phần all_film */
+.all_film{
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.all_film .heading{
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.all_film .left-text {
+    text-align: left;
+  }
+  
+  .all_film  .right-button {
+    text-align: right;
+    margin-right: 13%;
+  }
+  .all_film .box-container{
+    width: 95%;
+}
+.all_film .box-container .row .col-sm-3{
+   margin-bottom: 3%;
+}
+.all_film .box-container .row .col-sm-3 .image img{
+    width: 13rem;
+    height: 20rem;
+}
+.all_film .box-container .row .col-sm-3 .image img{
+    width: 13rem;
+    height: 20rem;
+}
+
+.all_film .box-container .row .col-sm-3 .image img:hover{
+    transform: scale(1.1);
+    filter: blur(2px); 
+}
+
+
+.all_film .box-container .row .col-sm-3  h3{
+    margin-top: 7%;
+    font-size: 1.3rem;
+    color: #ffffff;
+    width: 15rem;
+}
+.all_film .box-container .row .col-sm-3  span{
+    color: #c1c1c1;
+}
+.all_film .box-container .row .col-sm-3 .play-icon {
+    position: relative;
+    font-size: 4em;
+    top:-38%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.all_film .box-container .row .col-sm-3:hover .play-icon {
+    display: block;
+}
+
+.all_film{
+    margin-bottom: 5%;
+}
+
+/* css của phần footer */
+#footer{
+    color: white;
+    background-color:#383838;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.footer_info{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    padding:50px 0 ;
+}
+
+
+.footer_info  b{
+    font-size: 1.7rem;
+    margin-left: 18px;
+}
+.about{
+    width: 35%;
+} 
+.link{
+    width: 15%;
+    margin-left: 3%;
+    margin-right: 5%;
+}
+.Contact{
+    width: 45%;
+}
+
+.about .navbar-brand{
+    margin-bottom: 20px;
+}
+
+.about p{
+    margin-top: 27px;
+    font-size: 20px;
+}
+
+.social-media{
+    margin-top: 30px;
+}
+.social-media ul{
+    display: flex;
+}
+.social-media ul li a{
+    display: inline-block;
+    margin-right:  50px;
+    width: 50px;
+    height: 50px;
+    padding-top: 12px ;
+    background-color: transparent;
+    border: 1px solid white;
+    text-align: center;
+}
+.social-media ul li a:hover{
+    background-color: white;
+    color: red;
+}
+.link ul{
+    margin-top: 20px;
+}
+.link ul li a{
+    display: block;
+    margin-bottom: 15px ;
+    font-size: 20px;
+}
+
+.link ul li a:hover{
+    color: red;
+}
+
+
+.Contact ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom:5px ;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.Contact span {
+    margin-right: 20px;
+    margin-top:-3%;
+}
+
+
+@media (min-width: 0px) and (max-width: 575px) {
+    /* header */
+    .user-pic{
+        display: none;
+    }
+    .input-group{
+        display: none;
+    }
+
+    /* banner */
+    .content{
+        margin-left: -10%;
+        position: absolute;
+        margin-top: -43%;
+        max-width: 700px;
+    }
+    .swiper {
+        margin-top: 150%;
+      }
+    
+      .swiper-slide {
+        width: 150px;
+      }
+    
+      .swiper-slide img {
+        width: 90%;
+        height: 250px;
+      }
+    /* all phim */
+    .all_film .custom-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+  }
+
+  /* Màn hình bảng */
+  @media (min-width: 576px) and (max-width: 769px) {
+    /* header */
+    
+    .user-pic{
+        display: none;
+    }
+    .input-group{
+        display: none;
+    }
+
+    /* banner */
+    .content{
+        margin-left: -7%;
+        margin-top: -43%;
+        max-width: 700px;
+    }
+    .swiper {
+        margin-top: 70%;
+    }
+    .swiper-slide {
+        width: 200px;
+    }
+    .swiper-slide img {
+        width: 90%;
+        height: 250px;
+    }
+    /* all phim */
+    .all_film .custom-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+  }
+  
+  
+  /* iPad */
+  @media (min-width: 770px) and (max-width: 900px) {
+    /* header */
+
+    .input-group{
+        display: none;
+    }
+    /* banner */
+    .content{
+        margin-left: -7%;
+        position: absolute;
+        margin-top: -40%;
+        max-width: 700px;
+    }
+    .swiper {
+        margin-top: 50%;
+      }
+    
+      .swiper-slide {
+        width: 200px;
+      }
+    
+      .swiper-slide img {
+        width: 90%;
+        height: 280px;
+      }
+   
+    /* all phim */
+    .all_film .custom-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* footer */
+    .footer_info  b{
+        font-size: 25px;
+    }
+    .about {
+        width: 35%;
+    }
+    .Contact{
+        width: 45%;
+    }
+    .link{
+        width: 30%;
+    }
+    .about p{
+        font-size: 15px;
+    }
+    .link ul li a{
+        font-size: 18px;
+    }
+    .Contact ul li{
+        font-size: 18px;
+    }
+  }
+  
+  /* Màn hình máy tính để bàn */
+  @media (min-width: 901px) and (max-width: 1100px) {
+    /* header */
+    .input-group{
+        display: none;
+    }
+    /* banner */
+    .content{
+        margin-left: -5%;
+        max-width: 430px;
+        font-size: 1rem;
+    }
+    .swiper {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+      .swiper-slide {
+        width: 150px;
+      }
+      .swiper-slide img{
+        width: 100%;
+        height: 350px;
+      }
+   
+    /* all phim */
+    .all_film .custom-col {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+    /* footer */
+    .footer_info  b{
+        font-size: 25px;
+    }
+    .about {
+        width: 35%;
+    }
+    .Contact{
+        width: 45%;
+    }
+    .link{
+        width: 30%;
+    }
+    .about p{
+        font-size: 15px;
+    }
+    .link ul li a{
+        font-size: 18px;
+    }
+    .Contact ul li{
+        font-size: 18px;
+    }
+    
+  }
+  @media (min-width: 1101px) and (max-width: 1204px) {
+    /* header */
+    .container-fluid .navbar-brand b{
+       display: none;
+    }
+
+    /* banner */
+    .content{
+        margin-left: -5%;
+        max-width: 500px;
+    }
+    .swiper {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .swiper-slide {
+        width: 180px;
+    }
+    
+
+    /*  all phim*/
+    .all_film .custom-col {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    /* footer */
+    .footer_info  b{
+        font-size: 25px;
+    }
+    .about {
+        width: 35%;
+    }
+    .Contact{
+        width: 45%;
+    }
+    .link{
+        width: 30%;
+    }
+    .about p{
+        font-size: 15px;
+    }
+    .link ul li a{
+        font-size: 18px;
+    }
+    .Contact ul li{
+        font-size: 18px;
+    }
+    
+  }
+  @media (min-width: 1205px) and (max-width: 1440px) {
+    .all_film .custom-col {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    /* footer */
+    .footer_info  b{
+        font-size: 1.5rem;
+        margin-left: 18px;
+    }
+    .footer_info  b{
+        font-size: 25px;
+    }
+    .about {
+        width: 35%;
+    }
+    .Contact{
+        width: 45%;
+    }
+    .link{
+        width: 30%;
+    }
+  }
+
+@media screen and (max-width: 832px) {
+    .about , .Contact, .link{
+        width: 100%;
+        margin-bottom: 30px ;
+    }
+    .footer_info{
+        flex-direction: column;
+    }
+}
+
+
+
